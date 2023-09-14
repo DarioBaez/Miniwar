@@ -1,5 +1,4 @@
 import os
-import keyboard
 import time
 
 class Pantalla():
@@ -8,7 +7,7 @@ class Pantalla():
         
         self.pantalla = pantalla
     def Lista_pantalla(self):
-        time.sleep(0.5)
+        #time.sleep(0.2)
         os.system('clear')
         #Este metodo crea una pantalla visual de las listas (pixeles)
         print(len(self.LPantalla))
@@ -24,15 +23,32 @@ class Pantalla():
                 self.LPantalla[I].append("_")
     
     def InsertarXY(self, X, Y):
-        self.LPantalla[Y][X] = ("*")
+        self.LPantalla[Y][X] = ("|")
         
 
 
 
 P = Pantalla(pantalla = 30)
 P.Ejecutar()
+P.Lista_pantalla()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 def Movimiento(tecla):
     X = 1
     Y = 1
@@ -42,37 +58,28 @@ def Movimiento(tecla):
             P.Lista_pantalla()
             P.InsertarXY(X,Y)
             print("arriba")
-            keyboard.hook(Movimiento)
         
         elif tecla.name == 'down':
             Y -= 1
             P.Lista_pantalla()
             P.InsertarXY(X,Y)
             print("abajo")
-            keyboard.hook(Movimiento)
 
         elif tecla.name == 'left':
             X += 1
             P.Lista_pantalla()
             P.InsertarXY(X,Y)
             print("derecha")
-            keyboard.hook(Movimiento)
             
         elif tecla.name == 'right':
             X -= 1
             P.Lista_pantalla()
             P.InsertarXY(X,Y)
             print("Izquierda")
-            keyboard.hook(Movimiento)
             
         else:
             break
         
-
-keyboard.hook(Movimiento)
-
-# Esto mantendrá el programa en ejecución hasta que presiones Esc.
-keyboard.wait('esc')
 
 
     
@@ -95,4 +102,4 @@ class Movimiento():
         
 
 
-#Movi=Movimiento(1,2)
+#Movi=Movimiento(1,2)"""

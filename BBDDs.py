@@ -1,0 +1,1 @@
+#Este script es el encargado de manejar el progreso en el juego, guardar progresos y records del mismo
